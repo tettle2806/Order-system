@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>
+        Добавление новых заказов
+    </title>
+</head>
+<body>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Add Order</button>
-</form></title>
-</head>
-<body>
-
+</form>
 </body>
 </html>

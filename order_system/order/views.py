@@ -5,6 +5,7 @@ from django.shortcuts import render
 # order_system/order/views.py
 from django.shortcuts import render, redirect
 from .models import Order, OrderForm
+from django.shortcuts import get_object_or_404
 
 def add_order(request):
     if request.method == 'POST':
@@ -15,7 +16,7 @@ def add_order(request):
     else:
         form = OrderForm()
     return render(request, 'order/add_order.html', {'form': form})# order_system/order/views.py
-from django.shortcuts import get_object_or_404
+
 
 def delete_order(request, order_id):
     order = get_object_or_404(Order, id=order_id)
